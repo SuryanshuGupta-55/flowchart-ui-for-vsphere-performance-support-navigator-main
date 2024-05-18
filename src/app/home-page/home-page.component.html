@@ -1,0 +1,78 @@
+<div class="div-main">
+
+  <!-- Header part -->
+  <header class="header-6">
+
+    <!--Branding class contains the product logo and the project title (.clr-icon,.title) -->
+    <div class="branding">
+      <!--Setting the logo and name of the website -->
+      <a href="#" class="nav-link">
+        <clr-icon shape="vm-bug"></clr-icon>
+        <span class="title">Flowchart UI Navigator </span>
+      </a>
+    </div>
+
+    <!--header-actions class contains the contains secondary navigation links  -->
+    <div class="header-actions">
+      <!-- Creating a seach option to search by keywords -->
+      <form class="search">
+        <label for="search_input">
+          <input id="search_input" type="text" placeholder="Search for keywords...">
+        </label>
+      </form>
+
+      <!-- Creating an Option to logout and display current logged in user -->
+      <clr-dropdown>
+        <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
+          user@vmware.com
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen>
+          <a href="..." clrDropdownItem>Preferences</a>
+          <a href="..." clrDropdownItem>Log out</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+
+      <!-- Creating an Option to manage any settings -->
+      <a href="javascript://" class="nav-link nav-icon" aria-label="settings" title="Settings">
+        <clr-icon shape="cog"></clr-icon>
+      </a>
+    </div>
+
+  </header>
+
+  <!-- Home page message -->
+  <div class="fade-in-text">
+    <p class="home-text"> Welcome to Flowchart UI Navigator </p><br>
+    <p class="home-text"> A chance to create or explore the customized workflows as per requirements</p>
+    <button class="btn btn-primary" (click)="gotoFlowPage()">Get Started</button>
+  </div>
+
+  <!-- Footer HTML code Begin-->
+  <header class="header-6 footer-class">
+
+    <!-- VMWare logo -->
+    <div class="logo-div">
+      <div class="logo">VMware</div>
+    </div>
+
+    <div class="header-nav">
+      <!-- Linking confluence page -->
+      <a href="https://confluence.eng.vmware.com/pages/viewpage.action?spaceKey=RO&title=NCG+Project+Flow+Chart+UI"
+        target="_blank" class="btn-nav">
+        <clr-icon shape="file-group" class="is-solid" size="24"></clr-icon>
+      </a>
+      <!-- Linking gitlab page -->
+      <a href="https://gitlab.eng.vmware.com/agarwalna/flowchart-ui-for-vsphere-performance-support-navigator"
+        target="_blank" class="btn-nav">
+        <clr-icon shape="download" class="is-solid" size="24"></clr-icon>
+      </a>
+    </div>
+
+  </header>
+  <!-- Footer HTML Code End -->
+
+  <!-- For routing and displaying other components -->
+  <router-outlet></router-outlet>
+
+</div>
